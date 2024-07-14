@@ -1,3 +1,4 @@
+import 'package:bookish_beats/CONSTANT/myColor.dart';
 import 'package:bookish_beats/CONSTANT/myFunctions.dart';
 import 'package:bookish_beats/PROVIDER/mainProvider.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ class ViewOrders extends StatelessWidget {
   ];
   List<String> txt =[
     'the kite runner',
-    'irutti oru punnyalan',
+    'iruttil oru punnyalan',
     'orikkal'
   ];
 
@@ -37,10 +38,10 @@ class ViewOrders extends StatelessWidget {
           onTap: (){
             back(context);
 },
-            child: Icon(Icons.arrow_back,color: Colors.white)),
+            child: Icon(Icons.arrow_back,color: clWhite)),
           title: Padding(
             padding: const EdgeInsets.only(left: 20),
-            child: Text('View Orders',style: TextStyle(fontFamily:'gravitas' ,fontSize: 20,color: Colors.white)),
+            child: Text('View Orders',style: TextStyle(fontFamily:'gravitas' ,fontSize: 20,color:clWhite)),
           ),
 
 
@@ -68,10 +69,10 @@ class ViewOrders extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text("Delivered on jan 4",style: TextStyle(
-                              color: Colors.white,fontSize:16,fontFamily: 'cantata',
+                              color: clWhite,fontSize:16,fontFamily: 'cantata',
                             ),),
                             Text(txt[index],style: TextStyle(
-                              fontFamily: 'cantata',fontSize: 18,color: Colors.white,
+                              fontFamily: 'cantata',fontSize: 18,color: clWhite,
                             ),),
                             TextButton(onPressed: () {
                                alert(context);
@@ -79,7 +80,7 @@ class ViewOrders extends StatelessWidget {
                               width: 100,
                               height: 40,
                               child: Center(child: Text("Rating",style: TextStyle(color: Colors.white,fontSize: 16),)),
-                              decoration: BoxDecoration(color:Color(0xff3E2501) ,borderRadius: BorderRadius.circular(20)),
+                              decoration: BoxDecoration(color:cl3E2501 ,borderRadius: BorderRadius.circular(20)),
                             ) )
 
 
@@ -131,7 +132,7 @@ class ViewOrders extends StatelessWidget {
           builder: (context,val,child) {
             return Text(
               val.ratingValue != null ? val.ratingValue.toString() : 'Rate it!',
-              style: const TextStyle(color: Colors.black, fontSize: 13),
+              style: const TextStyle(color: clBlack, fontSize: 13),
             );
           }
         ),
@@ -146,9 +147,9 @@ class ViewOrders extends StatelessWidget {
           width: 65,
           decoration:BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            color: Color(0xff3E2501),
+            color: cl3E2501,
           ),
-          child: Center(child: Text("Submit",style: TextStyle(color: Colors.white),)),
+          child: Center(child: Text("Submit",style: TextStyle(color: clWhite),)),
         )),
 
       ],

@@ -6,14 +6,15 @@ categoryadd(this.id,this.categoryname);
 }
 
 class productadd{
-  String id;
+  String productid;
   String BookImage;
   String bookname;
   String authorname;
+  String categoryname;
   String description;
   String price;
 
-  productadd(this.id,this.BookImage,this.bookname,this.authorname,this.description,this.price);
+  productadd(this.productid,this.BookImage,this.bookname,this.authorname,this.categoryname,this.description,this.price);
 
 
 }

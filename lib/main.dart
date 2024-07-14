@@ -20,18 +20,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context)=>mainProvider(),),
         ChangeNotifierProvider(create: (context)=>LoginProvider()),
+        ChangeNotifierProvider(create: (context)=>mainProvider(),),
+
 
       ],
       child: MaterialApp(
-debugShowCheckedModeBanner: false,
+            debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const Splash()
+        home:  Splash()
       ),
     );
   }

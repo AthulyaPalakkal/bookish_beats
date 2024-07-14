@@ -1,3 +1,4 @@
+import 'package:bookish_beats/CONSTANT/myColor.dart';
 import 'package:bookish_beats/PROVIDER/mainProvider.dart';
 import 'package:bookish_beats/USER/eventsPage.dart';
 import 'package:bookish_beats/USER/home.dart';
@@ -27,8 +28,6 @@ class Bottombar extends StatefulWidget {
 class _BottombarState extends State<Bottombar> {
 
   int selectedIndex = 0;
-
-
 
   @override
   void _itemTapped(int index){
@@ -61,9 +60,9 @@ class _BottombarState extends State<Bottombar> {
           return DotNavigationBar(
             margin: EdgeInsets.zero,marginR: EdgeInsets.zero,paddingR: EdgeInsets.zero,
             // enableFloatingNavBar: true,
-            selectedItemColor: Colors.white,
+            selectedItemColor: clWhite,
             unselectedItemColor: Color(0xff988A9A),
-            backgroundColor: Color(0xff3E2501),
+            backgroundColor: cl3E2501,
             currentIndex: selectedIndex,
 
             onTap: _itemTapped,
@@ -86,10 +85,10 @@ class _BottombarState extends State<Bottombar> {
               DotNavigationBarItem(
                 icon: value.profileimage.isNotEmpty? Padding(
                   padding: const EdgeInsets.only(right: 10),
-                  child: CircleAvatar(backgroundColor:Color(0xffd9d9d9),
+                  child: CircleAvatar(backgroundColor:cld9d9d9,
                       maxRadius: 15,backgroundImage: NetworkImage(value.profileimage!)
                   ),
-                ): CircleAvatar(backgroundColor:Color(0xffd9d9d9),
+                ): CircleAvatar(backgroundColor:cld9d9d9,
                   maxRadius: 15,child: Icon(Icons.person),
                 ),
                 // Icon(Icons.account_circle),
